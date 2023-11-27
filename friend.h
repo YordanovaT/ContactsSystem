@@ -6,7 +6,7 @@
 class Friend : public Person{
 
     private:
-        std::string personal_email= get_fname() + "." + get_lname() + "@mail.com";
+        std::string personal_email= first_name + "." + last_name + "@mail.com";
         std::string address;
 
     public:
