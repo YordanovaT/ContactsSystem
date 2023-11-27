@@ -1,5 +1,6 @@
 #include "address_book.h"
 #include "person.h"
+#include "friend.h"
 
 int main()
 {
@@ -9,13 +10,15 @@ int main()
     
     AddressBook AdrBook;
     Person *p=0;
+    Friend *fr=0;
     while (1)
     {
         std::cout<<"--------------------------------------- MENU --------------------------------------- \n";
         std::cout<<"Do you wish to perform an operation? Choose a number between 0-6.\n";
         std::cout<<"1. Add new contact.\n";
-        std::cout<<"2. Output contacts.\n";
-        std::cout<<"3. Delete contact\n";
+        std::cout<<"2. Add new friend contact.\n";
+        std::cout<<"3. Output contacts.\n";
+        std::cout<<"4. Delete contact\n";
         std::cout<<"0. Exit program.\n";
 
         std::cin>>choice;
@@ -37,12 +40,19 @@ int main()
                 std::cout<<"---------------------------------------------------------------------------------------------------- \n\n";
                 break;
             case 2:
+                std::cout<<"------------------------------------- Adding new friend contact ------------------------------------- \n";
+                fr= new Friend();
+                AdrBook.add_contact(fr);
+                std::cout<<"---------------------------------------------------------------------------------------------------- \n\n";
+                break;
+
+            case 3:
                 std::cout<<"---------------------------------------- Outputting contacts ---------------------------------------- \n";
                 AdrBook.output();
                 std::cout<<"---------------------------------------------------------------------------------------------------- \n\n";
                 break;
             
-            case 3:
+            case 4:
                 std::cout<<"Enter person ID: ";
                 std::cin>>id;
                 std::cin.ignore();
