@@ -3,11 +3,15 @@
 
 Person::Person()
 {
-    std::string name, phone_num;
+    std::string f_name, l_name, phone_num;
     int years;
 
-    std::cout<<"Enter name: \n";
-    std::cin>>name;
+    std::cout<<"Enter first name: \n";
+    std::cin>>f_name;
+    std::cin.ignore();
+
+    std::cout<<"Enter last name: \n";
+    std::cin>>l_name;
     std::cin.ignore();
 
     std::cout<<"Enter phone number: \n";
@@ -18,7 +22,8 @@ Person::Person()
     std::cin>>years;
     std::cin.ignore();
 
-    full_name=name;
+    first_name=f_name;
+    last_name=l_name;
     phone=phone_num;
     age=years;
     id++;
@@ -27,7 +32,7 @@ Person::Person()
 
 void Person::print()
 {
-    std::cout<<id<<"\tName: "<<full_name<<"\tPhone: "<<phone<<"\t"<<age<<" years old\n";
+    std::cout<<id<<"\tName: "<<first_name<<" " <<last_name<<"\tPhone: "<<phone<<"\t"<<age<<" years old\n";
 
 }
 

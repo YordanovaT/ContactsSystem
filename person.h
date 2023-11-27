@@ -5,16 +5,21 @@
 
 class Person
 {
-    private:
+    public:
         int id=0;
-        std::string full_name;
+        std::string first_name;
+        std::string last_name;
         std::string phone;
         int age;
 
-    public:
+    
         Person();
         ~Person();
         virtual void print();
         int get_person_id();
+        int get_person_age();
+        std::string get_fname();
+        std::string get_lname();
+        std::string get_phone();
 };
 
