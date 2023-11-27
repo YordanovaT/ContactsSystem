@@ -26,7 +26,7 @@ void AddressBook::erase_contact(int id)
     }
     for(int i=0; i<contacts_count; i++)
     {
-        if(persons[i]->get_person_id() == id)
+        if(id==i+1)
         {
             persons[i]=persons[contacts_count - 1];
             flag=1;
@@ -42,6 +42,7 @@ void AddressBook::output()
 {
     for(int i=0; i<contacts_count; i++)
     {
+        std::cout<<i+1;
         persons[i]->print();
     }
 }

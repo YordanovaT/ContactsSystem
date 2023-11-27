@@ -26,19 +26,13 @@ Person::Person()
     last_name=l_name;
     phone=phone_num;
     age=years;
-    id++;
-
+   
 }
 
 void Person::print()
 {
-    std::cout<<id<<"\tName: "<<first_name<<" " <<last_name<<"\tPhone: "<<phone<<"\t"<<age<<" years old\n";
+    std::cout<<"\tName: "<<first_name<<" " <<last_name<<"\tPhone: "<<phone<<"\t"<<age<<" years old\n";
 
-}
-
-int Person::get_person_id()
-{
-    return id;
 }
 
 Person::~Person()

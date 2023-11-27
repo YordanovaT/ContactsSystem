@@ -8,12 +8,11 @@ Friend::Friend():Person()
     std::cin.ignore();
 
     address=addr;
-    id++;
 }
 
 void Friend::print()
 {
-     std::cout<<id<<"\tName: "<<first_name<<" " <<last_name<<"\tPhone: "<<phone<<"\t"<<age<<" years old.\tEmail: "<< personal_email<<"\tAddress: "<<address<<std::endl;
+     std::cout<<"\tName: "<<first_name<<" " <<last_name<<"\tPhone: "<<phone<<"\t"<<age<<" years old.\tEmail: "<< personal_email<<"\tAddress: "<<address<<std::endl;
 }
 
 Friend::~Friend()
