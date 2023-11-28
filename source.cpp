@@ -23,8 +23,8 @@ int main()
         std::cout<<"2. Add new friend contact.\n";
         std::cout<<"3. Add new collegue contact.\n";
         std::cout<<"4. Output contacts.\n";
-        std::cout<<"5. Delete contact\n";
-        std::cout<<"6. Search for a contact\n";
+        std::cout<<"5. Delete contact.\n";
+        std::cout<<"6. Search for a contact.\n";
         std::cout<<"0. Exit program.\n";
 
         std::cin>>choice;
