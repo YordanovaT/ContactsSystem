@@ -24,6 +24,7 @@ int main()
         std::cout<<"3. Add new collegue contact.\n";
         std::cout<<"4. Output contacts.\n";
         std::cout<<"5. Delete contact\n";
+        std::cout<<"6. Search for a contact\n";
         std::cout<<"0. Exit program.\n";
 
         std::cin>>choice;
@@ -73,6 +74,9 @@ int main()
                 AdrBook.erase_contact(ID);
                 
                 break;
+            case 6:
+                std::cout<<"\n-------------------------------------------- Search for a contact -------------------------------------------- \n\n";
+                AdrBook.search_for_a_contact(p);
         
         default:
             break;

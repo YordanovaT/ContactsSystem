@@ -14,6 +14,7 @@ class AddressBook
 
         void add_contact(Person *person);
         void erase_contact(int id);
-        void output();   
+        void output(); 
+        void search_for_a_contact(Person *person);  
 
 };

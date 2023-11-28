@@ -47,6 +47,34 @@ void AddressBook::output()
     }
 }
 
+void AddressBook::search_for_a_contact(Person *person)
+{
+    std::string fname, lname;
+    int flag=0;
+    std::cout<<"Enter first name\n";
+    std::cin>>fname;
+    std::cin.ignore();
+
+    std::cout<<"Enter last name\n";
+    std::cin>>lname;
+    std::cin.ignore();
+
+    for(int i=0; i<contacts_count; i++)
+    {
+        if(fname == persons[i]->first_name && lname == persons[i]->last_name)
+        {
+            std::cout<<i+1;
+            persons[i]->print();
+            flag=1;
+        }
+    }
+
+    if(!flag) //it means the flag is still 0
+    {
+        std::cout<<"Found no contact with the given credentials. Try again.\n";
+    }
+}
+
 AddressBook::~AddressBook()
 {
     for(int i=0; i<contacts_count; i++)
